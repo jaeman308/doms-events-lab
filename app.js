@@ -19,16 +19,20 @@ calculator.addEventListener('click', (event) => {
     // need to be able to click numbers to add to num 1 
 
     if (event.target.classList.contains('number')) {
-        num1 = display.innerText += event.target.textContent;
+         display.innerText += event.target.textContent;
+         num1 = +display.innerText;
          // console.dir(display)
         // Do something with a number
-        console.log(num1)
+        console.log(typeof num1)
+
     }  
     // Example
     // select operator 
     if (event.target.innerText === '*' || '/' || '+' || '-'){
     //   display.innerText += `${event.target.innerText}`
-        //   display.innerText += event.target.textContent;
+        // operator = 
+        
+    // display.innerText += event.target.textContent;
     } 
     if (event.target.class === 'equals'){
         return `${num1} ${operator} ${num2}`
