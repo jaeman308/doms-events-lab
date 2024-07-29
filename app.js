@@ -18,12 +18,20 @@ calculator.addEventListener('click', (event) => {
     // Example
     // need to be able to click numbers to add to num 1 
 
-    if (event.target.classList.contains('number')) {
-         display.innerText += event.target.textContent;
-         num1 = +display.innerText;
-         // console.dir(display)
-        // Do something with a number
-        // console.log(typeof num1)
+
+    if (event.target.classList.contains('number')) { 
+        // if no operator have num1 assigned to the value selected. 
+        //when the operator selected have num 2 assigned the value selected.
+console.log(operator === '')
+        if (operator === ''){
+            display.innerText += event.target.textContent;
+            num1 = +display.innerText;
+
+        } else {
+            display.innerText += event.target.textContent;
+            num2 = +display.innerText
+
+        }
 
     }  
     // Example
@@ -41,6 +49,7 @@ calculator.addEventListener('click', (event) => {
     if (event.target.class === 'equals'){
         return `${num1} ${operator} ${num2}`
     }
+    console.log({num1, num2, operator})
   });
   
 /*----------------------------- Event Listeners -----------------------------*/
