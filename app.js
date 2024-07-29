@@ -6,6 +6,7 @@ const display = document.querySelector('.display');
 let num1 = 0;
 let num2 = 0;
 let operator = ''
+let result = 0;
 
 /*----------------------- Cached Element References ------------------------*/
 
@@ -46,10 +47,16 @@ console.log(operator === '')
 
     // display.innerText += event.target.textContent;
     } 
-    if (event.target.class === 'equals'){
-        return `${num1} ${operator} ${num2}`
+    if (event.target.classList.contains('equals')){
+    // end result from num 1 and num2 base on the assigned operator 
+        if(operator === '+'){
+            result = num1 + num2 
+            display.innerText = result;
+console.log(result)
+        }
+        console.log({num1, num2, operator})
+    
     }
-    console.log({num1, num2, operator})
   });
   
 /*----------------------------- Event Listeners -----------------------------*/
