@@ -40,21 +40,30 @@ console.log(operator === '')
     // clear the number from the display
     //variable needs to contain the operator 
     if (event.target.classList.contains ('operator')){
-    // console.log(event.target);
-    display.innerText = '';
-    operator = event.target.textContent;
+        display.innerText = '';
+        operator = event.target.textContent;
+        console.log({num1, num2, operator, result})
+        if (operator === 'C') {
+            operator = '';
+            num1 = 0;
+            num2 = 0;
+            result = 0;
+            
+        }   
+        
+    
+    
     // console.log(operator) 
 
     // display.innerText += event.target.textContent;
     } 
     if (event.target.classList.contains('equals')){
     // end result from num 1 and num2 base on the assigned operator 
-        if(operator === '+'){
-            result = num1 + num2 
-            display.innerText = result;
-console.log(result)
-        }
-        console.log({num1, num2, operator})
+    if(operator === '+'){
+        result = num1 + num2 
+        display.innerText = result;
+        console.log(result)
+    }
     
     }
   });
