@@ -23,15 +23,19 @@ calculator.addEventListener('click', (event) => {
          num1 = +display.innerText;
          // console.dir(display)
         // Do something with a number
-        console.log(typeof num1)
+        // console.log(typeof num1)
 
     }  
     // Example
     // select operator 
-    if (event.target.innerText === '*' || '/' || '+' || '-'){
-    //   display.innerText += `${event.target.innerText}`
-        // operator = 
-        
+    // clear the number from the display
+    //variable needs to contain the operator 
+    if (event.target.classList.contains ('operator')){
+    // console.log(event.target);
+    display.innerText = '';
+    operator = event.target.textContent;
+    // console.log(operator) 
+
     // display.innerText += event.target.textContent;
     } 
     if (event.target.class === 'equals'){
