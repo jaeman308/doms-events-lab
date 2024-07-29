@@ -60,9 +60,20 @@ console.log(operator === '')
     if (event.target.classList.contains('equals')){
     // end result from num 1 and num2 base on the assigned operator 
     if(operator === '+'){
-        result = num1 + num2 
+        result = num1 + num2;
         display.innerText = result;
-        console.log(result)
+        // console.log(result)
+
+    }if(operator === '-') {
+        result = num1 - num2;
+        display.innerText = result;
+
+    } if(operator === '*'){
+        result = num1 * num2;
+        display.innerText = result;
+    } if (operator === '/') {
+        result = num1 / num2;
+        display.innerText = result;   
     }
     
     }
